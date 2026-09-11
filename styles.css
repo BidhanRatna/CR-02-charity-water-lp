@@ -5,11 +5,16 @@
   --white: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Set up the font, background color, and spacing for the whole page. */
 body {
   background-color: var(--yellow);
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
+  overflow-x: hidden;
   color: var(--black);
 }
 
@@ -29,6 +34,7 @@ body {
   flex: 1 1 52%;
   flex-direction: column;
   gap: 28px;
+  min-width: 0;
 }
 
 .headline-panel,
@@ -112,8 +118,10 @@ h1 {
 .hero-image {
   flex: 1 1 48%;
   min-height: 680px;
+  min-width: 0;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
 .corner-logo {
@@ -127,7 +135,7 @@ h1 {
 }
 
 /* On smaller screens, stack the panels so the text stays easy to read. */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .campaign {
     display: block;
     padding: 28px 18px;
@@ -145,19 +153,20 @@ h1 {
   }
 
   .headline-panel {
-    padding: 36px 28px;
+    padding: 36px 24px;
   }
 
   h1 {
-    font-size: clamp(3.1rem, 15vw, 5.5rem);
+    font-size: clamp(3rem, 12vw, 5.5rem);
   }
 
   .bottom-row {
+    display: block;
     gap: 18px;
   }
 
   .message-panel {
-    padding: 22px 28px;
+    padding: 22px 24px;
   }
 
   .donate-button {
@@ -165,7 +174,9 @@ h1 {
   }
 
   .donate-panel {
+    margin-top: 18px;
     flex-basis: 145px;
+    min-height: 145px;
   }
 
   .hero-image {
@@ -177,16 +188,28 @@ h1 {
 }
 
 @media (max-width: 520px) {
-  .bottom-row {
-    display: block;
+  .campaign {
+    padding: 20px 12px;
   }
 
-  .donate-button {
-    min-height: 130px;
+  .headline-panel {
+    padding: 32px 20px;
   }
 
+  h1 {
+    font-size: clamp(2.65rem, 13vw, 4.5rem);
+  }
+
+  .message-panel {
+    padding: 20px;
+  }
+
+  .message-panel p {
+    font-size: 1.1rem;
+  }
+
+  .donate-button,
   .donate-panel {
-    margin-top: 18px;
     min-height: 130px;
   }
 }
