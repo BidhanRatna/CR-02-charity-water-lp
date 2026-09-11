@@ -3,45 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <title>Turn Your Coffee Money Into Clean Water | charity: water</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+    <!-- The yellow background holds the complete campaign message. -->
+    <main class="campaign">
+        <!-- This small logo sits in the top-right corner of the design. -->
+        <img class="corner-logo" src="img/water-can-transparent.png" alt="charity: water logo">
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+        <div class="left-column">
+            <!-- The large headline is the first thing visitors should read. -->
+            <section class="headline-panel">
+                <h1>Turn Your<br> Coffee<br> Money Into<br> Clean Water.</h1>
+            </section>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+            <div class="bottom-row">
+                <!-- This message explains where the donation goes. -->
+                <section class="message-panel" id="story" aria-labelledby="story-heading">
+                    <h2 id="story-heading">Our story</h2>
+                    <p>Come along with thousands of students to put an end to the water issue. The field receives 100% of your donation.</p>
+                </section>
+
+                <!-- The button is the main action on the page. -->
+                <section class="donate-panel" id="donate" aria-labelledby="donate-heading">
+                    <h2 id="donate-heading" class="visually-hidden">Make a donation</h2>
+                    <a class="donate-button" href="https://www.charitywater.org/donate">Donate $5<br>Today</a>
+                </section>
+            </div>
         </div>
-    </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+        <!-- The image shows the real-world impact of clean water. -->
+        <img class="hero-image" src="img/clean-water-impact.jpg" alt="Child drinking clean water">
+    </main>
 </body>
 </html>
