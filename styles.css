@@ -19,19 +19,42 @@ body {
 }
 
 .campaign {
-  box-sizing: border-box;
   display: flex;
   gap: 28px;
   margin: 0 auto;
   max-width: 1680px;
   min-height: 100vh;
-  padding: 60px 64px;
+  padding: 112px 64px 60px;
   position: relative;
+}
+
+.site-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 64px;
+  position: absolute;
+  right: 64px;
+  top: 24px;
+}
+
+.brand-logo {
+  height: auto;
+  max-width: 250px;
+  width: 42%;
+}
+
+.site-header p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .left-column {
   display: flex;
-  flex: 1 1 52%;
+  flex: 1 1 0;
   flex-direction: column;
   gap: 28px;
   min-width: 0;
@@ -53,10 +76,18 @@ body {
 }
 
 h1 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   font-size: clamp(3.8rem, 6vw, 7.2rem);
+  font-weight: 800;
   line-height: 0.95;
   margin: 0;
+}
+
+.hero-intro {
+  font-size: clamp(1.05rem, 1.5vw, 1.45rem);
+  line-height: 1.35;
+  margin: 28px 0 0;
+  max-width: 34rem;
 }
 
 .bottom-row {
@@ -116,7 +147,7 @@ h1 {
 }
 
 .hero-image {
-  flex: 1 1 48%;
+  flex: 1 1 0;
   min-height: 680px;
   min-width: 0;
   object-fit: cover;
@@ -124,28 +155,28 @@ h1 {
   width: 100%;
 }
 
-.corner-logo {
-  filter: brightness(0);
-  height: 76px;
-  object-fit: contain;
-  position: absolute;
-  right: 14px;
-  top: 8px;
-  width: 54px;
-}
-
 /* On smaller screens, stack the panels so the text stays easy to read. */
 @media (max-width: 900px) {
   .campaign {
     display: block;
-    padding: 28px 18px;
+    padding: 92px 18px 28px;
   }
 
-  .corner-logo {
-    height: 58px;
-    right: 8px;
-    top: 4px;
-    width: 42px;
+  .site-header {
+    left: 18px;
+    right: 18px;
+    top: 20px;
+  }
+
+  .brand-logo {
+    max-width: 190px;
+    width: 48%;
+  }
+
+  .site-header p {
+    font-size: 0.7rem;
+    max-width: 10rem;
+    text-align: right;
   }
 
   .left-column {
@@ -154,6 +185,10 @@ h1 {
 
   .headline-panel {
     padding: 36px 24px;
+  }
+
+  .hero-intro {
+    margin-top: 22px;
   }
 
   h1 {
@@ -189,7 +224,12 @@ h1 {
 
 @media (max-width: 520px) {
   .campaign {
-    padding: 20px 12px;
+    padding: 84px 12px 20px;
+  }
+
+  .site-header {
+    left: 12px;
+    right: 12px;
   }
 
   .headline-panel {
@@ -206,6 +246,11 @@ h1 {
 
   .message-panel p {
     font-size: 1.1rem;
+  }
+
+  .site-header p {
+    font-size: 0.62rem;
+    max-width: 8rem;
   }
 
   .donate-button,
